@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub y Manejo de Datos</title>
+
+<style>
+/* Fondo estilo PS2 */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow-x: hidden;
+    background: black;
+}
+
+/* Animación tipo torres */
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.tower {
+    position: absolute;
+    bottom: -200px;
+    width: 60px;
+    height: 300px;
+    background: linear-gradient(to top, rgba(255,255,255,0.8), transparent);
+    animation: rise 8s infinite ease-in;
+    opacity: 0.5;
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-120vh) scale(0.5);
+        opacity: 0;
+    }
+}
+
+/* Contenido */
+.container {
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+}
+
+h1, h2 {
+    color: #00ccff;
+    text-shadow: 0 0 10px #00ccff;
+}
+
+p, li {
+    line-height: 1.6;
+}
+
+.section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-left: 3px solid #00ccff;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="background">
+    <!-- Torres generadas -->
+    <div class="tower" style="left:10%; animation-delay:0s;"></div>
+    <div class="tower" style="left:30%; animation-delay:2s;"></div>
+    <div class="tower" style="left:50%; animation-delay:4s;"></div>
+    <div class="tower" style="left:70%; animation-delay:1s;"></div>
+    <div class="tower" style="left:85%; animation-delay:3s;"></div>
+</div>
+
+<div class="container">
+
+<h1>GitHub y Manejo de Datos de Usuario</h1>
+
+<div class="section">
+<h2>1. GitHub como herramienta de desarrollo</h2>
+<p>GitHub no solo sirve para guardar código, también es una herramienta clave en el desarrollo profesional.</p>
+
+<ul>
+<li><b>Commits:</b> registros de cambios realizados en el proyecto</li>
+<li><b>Branches:</b> permiten trabajar sin afectar el proyecto principal</li>
+<li><b>Pull requests:</b> revisión y unión de cambios</li>
+<li><b>Issues:</b> organización de errores o mejoras</li>
+</ul>
+
+<p>GitHub permite trabajar de forma ordenada, documentar avances y colaborar con otros desarrolladores.</p>
+</div>
+
+<div class="section">
+<h2>2. Manejo de datos del usuario</h2>
+
+<h3>Frontend</h3>
+<ul>
+<li>Se ejecuta en el navegador</li>
+<li>Usa cookies o almacenamiento local</li>
+<li>Más rápido pero menos seguro</li>
+</ul>
+
+<h3>Backend</h3>
+<ul>
+<li>Se ejecuta en el servidor</li>
+<li>Maneja sesiones y bases de datos</li>
+<li>Más seguro y controlado</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>3. Cookies</h2>
+<ul>
+<li>Expires / Max-Age: duración</li>
+<li>Secure: solo HTTPS</li>
+<li>HttpOnly: bloquea acceso desde JS</li>
+<li>SameSite: protege contra CSRF</li>
+</ul>
+
+<p><b>Ejemplo:</b> Usuario con sesión iniciada e idioma español.</p>
+</div>
+
+<div class="section">
+<h2>4. Sesiones</h2>
+<ul>
+<li>ID único</li>
+<li>Almacenamiento en servidor</li>
+<li>Tiempo de expiración</li>
+</ul>
+
+<p>Permiten mantener la sesión activa sin pedir login en cada acción.</p>
+</div>
+
+<div class="section">
+<h2>5. Cierre de sesión</h2>
+<ul>
+<li>Invalidar sesión</li>
+<li>Borrar datos</li>
+<li>Evitar reutilización</li>
+</ul>
+
+<p>Importante en bancos, redes sociales y tiendas online.</p>
+</div>
+
+<div class="section">
+<h2>6. Problemas comunes</h2>
+<ul>
+<li>Guardar contraseñas en cookies</li>
+<li>No cerrar sesiones</li>
+<li>No proteger cookies</li>
+<li>No usar cifrado</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>7. Buenas prácticas</h2>
+<ul>
+<li>Usar sesiones para datos sensibles</li>
+<li>Limitar duración de cookies</li>
+<li>Cierre automático</li>
+<li>Validar identidad del usuario</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Conclusión</h2>
+<p>
+GitHub es una herramienta esencial para el desarrollo web moderno. El manejo adecuado de cookies y sesiones permite proteger la información del usuario. Aplicar buenas prácticas garantiza aplicaciones seguras y confiables.
+</p>
+</div>
+
+</div>
+
+</body>
+</html>
